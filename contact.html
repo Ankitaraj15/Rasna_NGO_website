@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rasna Seva Sansthan Rahar Diwara - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">Rasna Seva Sansthan</h1>
+      <nav>
+        <div class="hamburger">☰</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Missions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="donation.html">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <h2 class="hindi">हमसे संपर्क करें</h2>
+        <p>Reach out for collaborations, donations, or volunteering. We’d love to hear from you!</p>
+        <p class="hindi">सहयोग, दान, या स्वयंसेवा के लिए संपर्क करें। हमें आपसे सुनना अच्छा लगेगा!</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rahar Diwara, Sonpur, Saran, Bihar, India</p>
+        <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दिवारा, सोनपुर, सारण, बिहार, भारत</p>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@rasnaseva.org</p>
+      </div>
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <h3 class="hindi">हमें संदेश भेजें</h3>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <h3 class="hindi">हमसे संपर्क करें</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Rahar Diwara, Sonpur, Saran, Bihar, India</p>
+        <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दिवारा, सोनपुर, सारण, बिहार, भारत</p>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@rasnaseva.org</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Missions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="donation.html">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Rasna Seva Sansthan Rahar Diwara. All rights reserved.</p>
+      <p class="hindi">© 2025 रसना सेवा संस्थान राहर दिवारा। सर्वाधिकार सुरक्षित।</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu toggle
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

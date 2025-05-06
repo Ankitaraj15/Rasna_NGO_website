@@ -1,0 +1,845 @@
+/* Reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: #f5f6f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.hindi {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.95rem;
+}
+
+/* Navbar */
+header {
+  background-color: #003087;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #ff6200;
+}
+
+.donate-btn {
+  background-color: #ff6200;
+  color: #fff !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 25px;
+}
+
+.donate-btn:hover {
+  background-color: #e55a00;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff6200;
+}
+
+.hamburger {
+  display: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slide 13.5s infinite;
+}
+
+.slide {
+  position: relative;
+  width: 33.33%;
+}
+
+.slide img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h2.hindi {
+  font-size: 2.25rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p.hindi {
+  font-size: 1.1rem;
+}
+
+.hero-text p + p.hindi,
+.hero-text h2 + h2.hindi {
+  margin-top: 0.25rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff6200;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e55a00;
+}
+
+.btn.hindi {
+  font-size: 0.95rem;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  29.63% { transform: translateX(0); }
+  33.33% { transform: translateX(-33.33%); }
+  62.96% { transform: translateX(-33.33%); }
+  66.67% { transform: translateX(-66.67%); }
+  96.30% { transform: translateX(-66.67%); }
+  100% { transform: translateX(0); }
+}
+
+/* What We Do */
+.what-we-do {
+  padding: 4rem 5%;
+  text-align: center;
+  background: #fff;
+}
+
+.what-we-do h2 {
+  font-size: 2.5rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.what-we-do h2.hindi {
+  font-size: 2.25rem;
+}
+
+.what-we-do h2 + h2.hindi {
+  margin-top: 0.25rem;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background: #f5f6f5;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+.program-card h3 {
+  font-size: 1.5rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.program-card h3.hindi {
+  font-size: 1.35rem;
+}
+
+.program-card h3 + h3.hindi {
+  margin-top: 0.25rem;
+}
+
+.program-card p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.program-card p.hindi {
+  font-size: 0.95rem;
+}
+
+.program-card p + p.hindi {
+  margin-top: 0.25rem;
+}
+
+/* Get Involved */
+.get-involved {
+  padding: 4rem 5%;
+  text-align: center;
+  background: #f0f4f8;
+}
+
+.get-involved h2 {
+  font-size: 2.5rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.get-involved h2.hindi {
+  font-size: 2.25rem;
+}
+
+.get-involved h2 + h2.hindi {
+  margin-top: 0.25rem;
+}
+
+.involvement-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.option {
+  padding: 2rem;
+}
+
+.option h3 {
+  font-size: 1.5rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.option h3.hindi {
+  font-size: 1.35rem;
+}
+
+.option h3 + h3.hindi {
+  margin-top: 0.25rem;
+}
+
+.option p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.option p.hindi {
+  font-size: 0.95rem;
+}
+
+.option p + p.hindi {
+  margin-top: 0.25rem;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 5%;
+  background: #fff;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info h2.hindi {
+  font-size: 2.25rem;
+}
+
+.contact-info h2 + h2.hindi {
+  margin-top: 0.25rem;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p.hindi {
+  font-size: 1rem;
+}
+
+.contact-info p + p.hindi {
+  margin-top: 0.25rem;
+}
+
+.contact-info .social-icons {
+  margin-top: 1rem;
+}
+
+.contact-form h3 {
+  font-size: 1.8rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form h3.hindi {
+  font-size: 1.6rem;
+}
+
+.contact-form h3 + h3.hindi {
+  margin-top: 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form input.hindi,
+.contact-form textarea.hindi {
+  font-size: 0.95rem;
+}
+
+.contact-form input + input.hindi,
+.contact-form textarea + textarea.hindi {
+  margin-top: 0.25rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  width: 100%;
+}
+
+.contact-form .btn + .btn.hindi {
+  margin-top: 0.25rem;
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 5%;
+  background: #fff;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-info h2 {
+  font-size: 2.5rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.about-info h2.hindi {
+  font-size: 2.25rem;
+}
+
+.about-info h2 + h2.hindi {
+  margin-top: 0.25rem;
+}
+
+.about-info p,
+.about-details p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-info p.hindi,
+.about-details p.hindi {
+  font-size: 1rem;
+}
+
+.about-info p + p.hindi,
+.about-details p + p.hindi {
+  margin-top: 0.25rem;
+}
+
+.about-info h3,
+.about-details h3 {
+  font-size: 1.8rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.about-info h3.hindi,
+.about-details h3.hindi {
+  font-size: 1.6rem;
+}
+
+.about-info h3 + h3.hindi,
+.about-details h3 + h3.hindi {
+  margin-top: 0.25rem;
+}
+
+.about-details .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.about-details .btn + .btn.hindi {
+  margin-top: 0.25rem;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 4rem 5%;
+  background: #fff;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-container h2 {
+  font-size: 2.5rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.projects-container h2.hindi {
+  font-size: 2.25rem;
+}
+
+.projects-container h2 + h2.hindi {
+  margin-top: 0.25rem;
+}
+
+.projects-container p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.projects-container p.hindi {
+  font-size: 1rem;
+}
+
+.projects-container p + p.hindi {
+  margin-top: 0.25rem;
+}
+
+.project-item {
+  margin-bottom: 2rem;
+}
+
+.project-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-text {
+  flex: 1;
+}
+
+.project-text h3 {
+  font-size: 1.8rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.project-text h3.hindi {
+  font-size: 1.6rem;
+}
+
+.project-text h3 + h3.hindi {
+  margin-top: 0.25rem;
+}
+
+.project-text p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-text p.hindi {
+  font-size: 1rem;
+}
+
+.project-text p + p.hindi {
+  margin-top: 0.25rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.project-item .btn {
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 4rem 5%;
+  background: #fff;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-container h2 {
+  font-size: 2.5rem;
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-container h2.hindi {
+  font-size: 2.25rem;
+}
+
+.gallery-container h2 + h2.hindi {
+  margin-top: 0.25rem;
+}
+
+.gallery-container p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-container p.hindi {
+  font-size: 1rem;
+}
+
+.gallery-container p + p.hindi {
+  margin-top: 0.25rem;
+}
+
+.gallery-item {
+  margin-bottom: 2rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-item p.hindi {
+  font-size: 1rem;
+}
+
+.gallery-item p + p.hindi {
+  margin-top: 0.25rem;
+}
+
+/* Footer */
+footer {
+  background-color: #003087;
+  color: #fff;
+  padding: 3rem 5%;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section h3.hindi {
+  font-size: 1.35rem;
+}
+
+.footer-section h3 + h3.hindi {
+  margin-top: 0.25rem;
+}
+
+.footer-section p,
+.footer-section ul li a {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section p.hindi {
+  font-size: 0.95rem;
+}
+
+.footer-section p + p.hindi {
+  margin-top: 0.25rem;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a:hover {
+  color: #ff6200;
+}
+
+.footer-section input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-section input.hindi {
+  font-size: 0.95rem;
+}
+
+.footer-section input + input.hindi {
+  margin-top: 0.25rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom p.hindi {
+  font-size: 0.95rem;
+}
+
+.footer-bottom p + p.hindi {
+  margin-top: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 5%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #003087;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+
+  .slider {
+    height: 400px;
+  }
+
+  .slide img {
+    height: 400px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text h2.hindi {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text p.hindi {
+    font-size: 0.9rem;
+  }
+
+  .contact-container,
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button-group {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .project-item .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gallery-item img {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text h2.hindi {
+    font-size: 1.35rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-text p.hindi {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .contact-info h2,
+  .about-info h2,
+  .projects-container h2,
+  .gallery-container h2 {
+    font-size: 2rem;
+  }
+
+  .contact-info h2.hindi,
+  .about-info h2.hindi,
+  .projects-container h2.hindi,
+  .gallery-container h2.hindi {
+    font-size: 1.8rem;
+  }
+
+  .contact-form h3,
+  .about-info h3,
+  .about-details h3,
+  .project-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form h3.hindi,
+  .about-info h3.hindi,
+  .about-details h3.hindi,
+  .project-text h3.hindi {
+    font-size: 1.35rem;
+  }
+}

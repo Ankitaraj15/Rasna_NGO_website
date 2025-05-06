@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rasna Seva Sansthan Rahar Diwara - Donate</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">Rasna Seva Sansthan</h1>
+      <nav>
+        <div class="hamburger">☰</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donation.html" class="active donate-btn">Donate Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="donation-section">
+    <div class="donation-container">
+      <h2>Support Our Cause</h2>
+      <h2 class="hindi">हमारे उद्देश्य का समर्थन करें</h2>
+      <p>Your donation can make a big difference in the lives of underprivileged communities.</p>
+      <p class="hindi">आपका दान वंचित समुदायों के जीवन में बड़ा बदलाव ला सकता है।</p>
+
+      <div class="donation-options">
+        <div class="donation-option">
+          <h3>Donate via QR Code</h3>
+          <h3 class="hindi">क्यूआर कोड के माध्यम से दान करें</h3>
+          <p>Scan the QR code below to make a secure donation using your preferred payment app.</p>
+          <p class="hindi">नीचे दिए गए क्यूआर कोड को स्कैन करें और अपनी पसंदीदा भुगतान ऐप का उपयोग करके सुरक्षित दान करें।</p>
+          <img src="images/qr-code.jpg" alt="QR Code for Donation" class="qr-code">
+        </div>
+
+        <div class="donation-option">
+          <h3>Donate via Bank Transfer</h3>
+          <h3 class="hindi">बैंक हस्तांतरण के माध्यम से दान करें</h3>
+          <p>Transfer your donation directly to the following bank account:</p>
+          <p class="hindi">अपना दान सीधे निम्नलिखित बैंक खाते में हस्तांतरित करें:</p>
+          <p><strong>Account Name:</strong> Rasna Seva Sansthan Rahar Diwara</p>
+          <p class="hindi"><strong>खाता नाम:</strong> रसना सेवा संस्थान राहर दिवारा</p>
+          <p><strong>Account Number:</strong> 123456789012</p>
+          <p class="hindi"><strong>खाता संख्या:</strong> 123456789012</p>
+          <p><strong>IFSC Code:</strong> SBIN0001234</p>
+          <p class="hindi"><strong>IFSC कोड:</strong> SBIN0001234</p>
+          <p><strong>Bank Name:</strong> State Bank of India</p>
+          <p class="hindi"><strong>बैंक का नाम:</strong> स्टेट बैंक ऑफ इंडिया</p>
+          <p><strong>Branch:</strong> Sonpur Branch, Saran, Bihar</p>
+          <p class="hindi"><strong>शाखा:</strong> सोनपुर शाखा, सारण, बिहार</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <h3 class="hindi">हमसे संपर्क करें</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Rahar Diwara, Sonpur, Saran, Bihar, India</p>
+        <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दिवारा, सोनपुर, सारण, बिहार, भारत</p>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@rasnaseva.org</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Missions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Rasna Seva Sansthan Rahar Diwara. All rights reserved.</p>
+      <p class="hindi">© 2025 रसना सेवा संस्थान राहर दिवारा। सर्वाधिकार सुरक्षित।</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu toggle
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

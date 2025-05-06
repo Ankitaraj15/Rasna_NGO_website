@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rasna Seva Sansthan Rahar Diwara - Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">Rasna Seva Sansthan</h1>
+      <nav>
+        <div class="hamburger">☰</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Missions</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donation.html">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="gallery-section">
+    <div class="gallery-container">
+      <h2>Our Gallery</h2>
+      <h2 class="hindi">हमारी गैलरी</h2>
+      <p>Discover the impact of our initiatives through these moments captured in our work.</p>
+      <p class="hindi">हमारे कार्यों में कैद इन पलों के माध्यम से हमारी पहलों का प्रभाव जानें।</p>
+      <div class="gallery-item">
+        <img src="images/slide1.jpg" alt="Education Program">
+        <p>Children learning at our rural school, gaining access to quality education.</p>
+        <p class="hindi">हमारे ग्रामीण स्कूल में बच्चे पढ़ते हुए, गुणवत्तापूर्ण शिक्षा प्राप्त कर रहे हैं।</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/slide2.jpg" alt="Healthcare Camp">
+        <p>Medical check-ups at our healthcare camp, bringing care to underserved communities.</p>
+        <p class="hindi">हमारे स्वास्थ्य शिविर में चिकित्सा जाँच, वंचित समुदायों तक देखभाल पहुँचाना।</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/slide3.jpg" alt="Women Empowerment">
+        <p>Women training in our vocational program, building skills for economic independence.</p>
+        <p class="hindi">हमारे व्यावसायिक प्रशिक्षण कार्यक्रम में महिलाएँ प्रशिक्षण लेती हुईं, आर्थिक स्वतंत्रता के लिए कौशल निर्माण।</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/slide4.jpg" alt="Social Reform Event">
+        <p>Community gathering for social reform awareness, promoting equality and justice.</p>
+        <p class="hindi">सामाजिक सुधार जागरूकता के लिए सामुदायिक सभा, समानता और न्याय को बढ़ावा देना।</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <h3 class="hindi">हमसे संपर्क करें</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Rahar Diwara, Sonpur, Saran, Bihar, India</p>
+        <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दिवारा, सोनपुर, सारण, बिहार, भारत</p>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@rasnaseva.org</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <h3 class="hindi">त्वरित लिंक</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Missions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donation.html">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Rasna Seva Sansthan Rahar Diwara. All rights reserved.</p>
+      <p class="hindi">© 2025 रसना सेवा संस्थान राहर दिवारा। सर्वाधिकार सुरक्षित।</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu toggle
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
