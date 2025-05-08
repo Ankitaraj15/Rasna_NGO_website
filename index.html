@@ -27,7 +27,6 @@
     </div>
   </header>
   
-
   <section class="slider">
     <div class="slides">
       <div class="slide">
@@ -60,7 +59,6 @@
           <a href="#donate" class="btn">Join Us</a>
         </div>
       </div>
-      
     </div>
   </section>
 
@@ -72,14 +70,13 @@
         <h3>Our Projects</h3>
         <h3 class="hindi">हमारे प्रोजेक्ट्स</h3>
         <a href="projects.html" class="btn">Our Projects</a>
-      
+      </div>
+      <div class="program-card">
+        <h3>Our Mission</h3>
+        <h3 class="hindi">हमारे मिशन</h3>
+        <a href="mission.html" class="btn">Our Missions</a>
+      </div>
     </div>
-    <div class="program-card">
-      <h3>Our Mission</h3>
-      <h3 class="hindi">हमारे मिशन</h3>
-      <a href="mission.html" class="btn">Our Missions</a>
-    
-  </div>
   </section>
 
   <section class="get-involved" id="donate">
@@ -130,8 +127,6 @@
           <li><a href="donation.html">Donate</a></li>
         </ul>
       </div>
-
-
     </div>
     <div class="footer-bottom">
       <p>© 2025 Rasna Seva Sansthan Rahar Diwara. All rights reserved.</p>
@@ -140,10 +135,20 @@
   </footer>
 
   <script>
-    (<!-- trigger -->) 
-    // Hamburger menu toggle
-    document.querySelector('.hamburger').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('active');
+    // Ensure DOM is fully loaded before running the script
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+          // Optional: Change hamburger icon to 'X' when menu is open
+          hamburger.textContent = navLinks.classList.contains('active') ? '✖' : '☰';
+        });
+      } else {
+        console.error('Hamburger or nav-links element not found.');
+      }
     });
   </script>
 </body>
