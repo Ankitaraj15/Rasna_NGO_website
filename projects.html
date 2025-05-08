@@ -7,97 +7,104 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .file-input {
+      display: block;
+      margin: 1rem auto;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: calc(1rem + 0.2vw);
+    }
+    .form-label {
+      display: block;
+      font-size: calc(1.1rem + 0.2vw);
+      margin-bottom: 0.5rem;
+      color: #003087;
+    }
+    .form-label.hindi {
+      font-size: calc(1rem + 0.2vw);
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="navbar">
-      <h1 class="logo">Rasna Seva Sansthan</h1>
+      <h1 class="logo">Rasna Seva <br> Sansthan</h1>
       <nav>
         <div class="hamburger">☰</div>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="projects.html" class="active">Missions</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="mission.html">Missions</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="donation.html" class="donate-btn">Donate Now</a></li>
+          <li><a href="donation.html">Donate</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="projects-section">
-    <div class="projects-container">
-      <h2>Our Missions</h2>
-      <h2 class="hindi">हमारे मिशन</h2>
-      <p>Explore our initiatives that are transforming lives across communities.</p>
-      <p class="hindi">हमारी उन पहलों को जानें जो समुदायों में जीवन बदल रही हैं।</p>
-      <div class="project-item">
-        <ol class="mission-list">
-          <li>
-            <p>To conduct various programmes for the economic, social, cultural, ethical, educational, literary and all round development of the poor, neglected, dalit and backward communities of the society and to keep equal feelings for all caste and communities.</p>
-            <p class="hindi">समाज के गरीब, उपेक्षित, दलित व पिछड़ा जाति के आर्थिक, सामाजिक, सांस्कृतिक, नैतिक, शैक्षणिक, साहित्यिक एवं सर्वांगीण विकास के लिए विभिन्न कार्यक्रमों का संचालन करना, सभी जाति एवं समुदाय के लिए बराबर भाव रखना।</p>
-          </li>
-          <li>
-            <p>To arrange education for the children of poor families, orphans and handicapped children and to provide vocational training for self-reliance.</p>
-            <p class="hindi">गरीब परिवारों, अनाथों और दिव्यांग बच्चों की शिक्षा की व्यवस्था करना और उन्हें आत्मनिर्भर बनाने के लिए व्यावसायिक प्रशिक्षण प्रदान करना।</p>
-          </li>
-          <li>
-            <p>To provide shelter, food, education, vocational training and health care to orphans, old aged people, widows and marginalised women.</p>
-            <p class="hindi">अनाथ बच्चों, वृद्धों, विधवाओं और हाशिए पर रहने वाली महिलाओं को आश्रय, भोजन, शिक्षा, व्यावसायिक प्रशिक्षण और स्वास्थ्य सेवाएँ प्रदान करना।</p>
-          </li>
-          <li>
-            <p>To conduct programmes for the eradication of social evils like child marriage, dowry system and oppression against women and to create awareness among people about family planning and social equality.</p>
-            <p class="hindi">बाल विवाह, दहेज प्रथा और महिलाओं के उत्पीड़न जैसी सामाजिक कुरीतियों को समाप्त करने के लिए कार्यक्रम आयोजित करना, और परिवार नियोजन व सामाजिक समानता के बारे में लोगों में जागरूकता बढ़ाना।</p>
-          </li>
-          <li>
-            <p>To provide vocational training of sewing, embroidery and other skills to women and to form self-help groups for economic independence and awareness against social injustice.</p>
-            <p class="hindi">महिलाओं को सिलाई, कढ़ाई और अन्य कौशलों में व्यावसायिक प्रशिक्षण प्रदान करना, और आर्थिक स्वतंत्रता व सामाजिक अन्याय के खिलाफ जागरूकता को बढ़ावा देने के लिए स्वयं सहायता समूह बनाना।</p>
-          </li>
-          <li>
-            <p>To conduct medical camps for free check-ups, vaccinations, health awareness and to run programmes for eye care, blood donation and prevention of diseases.</p>
-            <p class="hindi">मुफ्त जाँच, टीकाकरण और स्वास्थ्य जागरूकता के लिए चिकित्सा शिविर आयोजित करना, और नेत्र देखभाल, रक्त दान और रोग निवारण के लिए कार्यक्रम चलाना।</p>
-          </li>
-          <li>
-            <p>To promote environmental protection programmes like tree plantation, water conservation and pollution control awareness.</p>
-            <p class="hindi">वृक्षारोपण, जल संरक्षण और प्रदूषण नियंत्रण जागरूकता जैसे पर्यावरण संरक्षण कार्यक्रमों को बढ़ावा देना।</p>
-          </li>
-          <li>
-            <p>To create awareness among people against drug addiction, smoking, alcoholism and to conduct de-addiction programmes for the youth.</p>
-            <p class="hindi">नशा, धूम्रपान और शराबखोरी के खिलाफ लोगों में जागरूकता बढ़ाना, और युवाओं के लिए नशामुक्ति कार्यक्रम आयोजित करना।</p>
-          </li>
-          <li>
-            <p>To promote cultural and ethical values through organizing cultural programmes, religious events and ethical education.</p>
-            <p class="hindi">सांस्कृतिक और नैतिक मूल्यों को बढ़ावा देना, सांस्कृतिक कार्यक्रम, धार्मिक आयोजन और नैतिक शिक्षा का आयोजन करना।</p>
-          </li>
-          <li>
-            <p>To provide emergency relief and rehabilitation services during natural calamities like flood, earthquake, drought, etc.</p>
-            <p class="hindi">बाढ़, भूकंप और सूखे जैसी प्राकृतिक आपदाओं के दौरान आपातकालीन राहत और पुनर्वास सेवाएँ प्रदान करना।</p>
-          </li>
-          <li>
-            <p>To promote sports and physical education among children and youth by organizing sports events and providing training.</p>
-            <p class="hindi">बच्चों और युवाओं में खेल और शारीरिक शिक्षा को बढ़ावा देना, खेल आयोजनों का आयोजन करना और प्रशिक्षण प्रदान करना।</p>
-          </li>
-          <li>
-            <p>To provide legal awareness and assistance to the poor and marginalized communities to fight against social injustice.</p>
-            <p class="hindi">गरीब और हाशिए पर रहने वाले समुदायों को सामाजिक अन्याय के खिलाफ लड़ने के लिए कानूनी जागरूकता और सहायता प्रदान करना।</p>
-          </li>
-          <li>
-            <p>To promote education and awareness about modern agricultural techniques and organic farming among farmers.</p>
-            <p class="hindi">किसानों में आधुनिक कृषि तकनीकों और जैविक खेती के बारे में शिक्षा और जागरूकता को बढ़ावा देना।</p>
-          </li>
-          <li>
-            <p>To conduct programmes for the empowerment of differently-abled persons by providing them with skill development and employment opportunities.</p>
-            <p class="hindi">दिव्यांग व्यक्तियों के सशक्तिकरण के लिए कार्यक्रम आयोजित करना, उन्हें कौशल विकास और रोजगार के अवसर प्रदान करना।</p>
-          </li>
-          <li>
-            <p>To promote literacy and adult education programmes for the illiterate population to make them self-sufficient.</p>
-            <p class="hindi">निरक्षर आबादी के लिए साक्षरता और वयस्क शिक्षा कार्यक्रमों को बढ़ावा देना ताकि वे आत्मनिर्भर बन सकें।</p>
-          </li>
-        </ol>
-        <div class="button-group">
-          <a href="donation.html" class="btn">Support</a>
+  <section class="gallery-section">
+    <div class="gallery-container">
+      <h2>Our Projects</h2>
+      <h2 class="hindi">हमारे प्रोजेक्ट्स</h2>
+      <p>Discover the impact of our initiatives through these moments captured in our work.</p>
+      <p class="hindi">हमारे कार्यों में कैद इन पलों के माध्यम से हमारी पहलों का प्रभाव जानें।</p>
+      <div class="gallery-item">
+        <p><b>Health Initiatives.</b> <br> Providing essential healthcare services and medical camps to improve the well-being of underserved communities, ensuring access to quality health support.</p>
+        <p class="hindi">वंचित समुदायों के कल्याण के लिए आवश्यक स्वास्थ्य सेवाएँ और मेडिकल कैंप प्रदान करना, गुणवत्तापूर्ण स्वास्थ्य सहायता तक पहुँच सुनिश्चित करना।</p>
+        <img src="images/slide14.jpg" alt="Health Initiatives">
+      </div>
+      <div class="gallery-item">
+        <p><b>Building Toilets.</b> <br> During the Swachh Bharat Abhiyan initiated by PM Modi, we built toilets to promote sanitation and cleanliness, enhancing the quality of life for rural communities.</p>
+        <p class="hindi">पीएम मोदी द्वारा शुरू किए गए स्वच्छ भारत अभियान के दौरान, हमने स्वच्छता और सफाई को बढ़ावा देने के लिए शौचालय बनाए, जिससे ग्रामीण समुदायों के जीवन की गुणवत्ता में सुधार हुआ।</p>
+        <img src="images/slide30.jpg" alt="Building Toilets">
+      </div>
+      <div class="gallery-item">
+        <p><b>Helping People During COVID.</b> <br> Extending support during the COVID-19 pandemic by providing medical supplies, awareness campaigns, and aid to those affected, standing strong in crisis.</p>
+        <p class="hindi">COVID-19 महामारी के दौरान चिकित्सा आपूर्ति, जागरूकता अभियान और प्रभावित लोगों को सहायता प्रदान करके समर्थन देना, संकट में दृढ़ता से खड़े रहना।</p>
+        <img src="images/slide19.jpg" alt="Helping People During COVID">
+      </div>
+      <div class="gallery-item">
+        <p><b>Distributing Food.</b> <br> Distributing food to alleviate hunger among the needy, ensuring no one in our community goes without a meal, spreading care and compassion.</p>
+        <p class="hindi">जरूरतमंदों में भूख मिटाने के लिए भोजन वितरण, यह सुनिश्चित करना कि हमारे समुदाय में कोई भोजन के बिना न रहे, देखभाल और करुणा फैलाना।</p>
+        <img src="images/slide20.jpg" alt="Distributing Food">
+      </div>
+      <div class="upload-section">
+        <span class="upload-btn" id="add-project-btn">Add Project</span>
+      </div>
+    </div>
+    <!-- Add Project Modal -->
+    <div class="modal" id="add-project-modal">
+      <div class="modal-content">
+        <p>Add a New Project</p>
+        <p class="hindi">नया प्रोजेक्ट जोड़ें</p>
+        <label class="form-label" for="project-title">Project Title</label>
+        <label class="form-label hindi" for="project-title">प्रोजेक्ट का शीर्षक</label>
+        <input type="text" id="project-title" class="form-input" placeholder="Enter project title" required>
+        <label class="form-label" for="project-content-en">Project Content (English)</label>
+        <label class="form-label hindi" for="project-content-en">प्रोजेक्ट सामग्री (अंग्रेजी)</label>
+        <textarea id="project-content-en" class="form-input" placeholder="Enter project content in English" required></textarea>
+        <label class="form-label" for="project-content-hi">Project Content (Hindi)</label>
+        <label class="form-label hindi" for="project-content-hi">प्रोजेक्ट सामग्री (हिंदी)</label>
+        <textarea id="project-content-hi" class="form-input" placeholder="Enter project content in Hindi" required></textarea>
+        <label class="form-label" for="project-photo">Project Photo (1 photo required)</label>
+        <label class="form-label hindi" for="project-photo">प्रोजेक्ट फोटो (1 फोटो आवश्यक)</label>
+        <input type="file" id="project-photo" class="file-input" accept="image/*" required>
+        <div class="modal-buttons">
+          <button class="modal-btn" id="add-project-ok">OK</button>
+          <button class="modal-btn" id="add-project-cancel">Cancel</button>
         </div>
+      </div>
+    </div>
+    <!-- Password Error Modal -->
+    <div class="modal" id="password-error-modal">
+      <div class="modal-content">
+        <p>Incorrect password. Please try again.</p>
+        <p class="hindi">गलत पासवर्ड। कृपया पुनः प्रयास करें।</p>
+        <button class="modal-btn" id="password-error-ok">OK</button>
       </div>
     </div>
   </section>
@@ -109,21 +116,21 @@
         <h3 class="hindi">हमसे संपर्क करें</h3>
         <p><i class="fas fa-map-marker-alt"></i> Rahar Diwara, Sonpur, Saran, Bihar, India</p>
         <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दिवारा, सोनपुर, सारण, बिहार, भारत</p>
-        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-        <p><i class="fas fa-envelope"></i> info@rasnaseva.org</p>
+        <p><i class="fas fa-phone"></i> +91 74887 44048</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:rasnasevasansthan@gmail.com" class="email-link">rasnasevasansthan@gmail.com</a></p>
       </div>
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="donation.html">Donate</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="mission.html">Missions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donation.html">Donate</a></li>
         </ul>
       </div>
-      
-      
     </div>
     <div class="footer-bottom">
       <p>© 2025 Rasna Seva Sansthan Rahar Diwara. All rights reserved.</p>
@@ -135,6 +142,108 @@
     // Hamburger menu toggle
     document.querySelector('.hamburger').addEventListener('click', () => {
       document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Add Project functionality
+    const addProjectBtn = document.getElementById('add-project-btn');
+    const addProjectModal = document.getElementById('add-project-modal');
+    const passwordErrorModal = document.getElementById('password-error-modal');
+    const addProjectOk = document.getElementById('add-project-ok');
+    const addProjectCancel = document.getElementById('add-project-cancel');
+    const passwordErrorOk = document.getElementById('password-error-ok');
+    const galleryContainer = document.querySelector('.gallery-container');
+
+    // Load projects from LocalStorage on page load
+    function loadProjects() {
+      const projects = JSON.parse(localStorage.getItem('projects') || '[]');
+      projects.forEach(project => {
+        const newProject = document.createElement('div');
+        newProject.classList.add('gallery-item');
+        newProject.innerHTML = `
+          <p><b>${project.title}</b><br>${project.contentEn}</p>
+          <p class="hindi">${project.contentHi}</p>
+          <img src="${project.photo}" alt="${project.title}">
+        `;
+        const firstProject = galleryContainer.querySelector('.gallery-item');
+        if (firstProject) {
+          galleryContainer.insertBefore(newProject, firstProject);
+        } else {
+          galleryContainer.appendChild(newProject);
+        }
+      });
+    }
+
+    // Call loadProjects on page load
+    loadProjects();
+
+    addProjectBtn.addEventListener('click', () => {
+      const password = prompt('Enter password to proceed:');
+      if (password === '4564') {
+        addProjectModal.style.display = 'flex';
+      } else {
+        passwordErrorModal.style.display = 'flex';
+      }
+    });
+
+    addProjectOk.addEventListener('click', () => {
+      const title = document.getElementById('project-title').value.trim();
+      const contentEn = document.getElementById('project-content-en').value.trim();
+      const contentHi = document.getElementById('project-content-hi').value.trim();
+      const photo = document.getElementById('project-photo').files[0];
+
+      if (!title || !contentEn || !contentHi || !photo) {
+        alert('Please fill all fields and upload exactly one photo.');
+        return;
+      }
+
+      // Convert photo to Base64
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const photoBase64 = e.target.result;
+
+        // Create new project
+        const newProject = document.createElement('div');
+        newProject.classList.add('gallery-item');
+        newProject.innerHTML = `
+          <p><b>${title}</b><br>${contentEn}</p>
+          <p class="hindi">${contentHi}</p>
+          <img src="${photoBase64}" alt="${title}">
+        `;
+
+        // Insert new project at the top
+        const firstProject = galleryContainer.querySelector('.gallery-item');
+        if (firstProject) {
+          galleryContainer.insertBefore(newProject, firstProject);
+        } else {
+          galleryContainer.appendChild(newProject);
+        }
+
+        // Save to LocalStorage
+        const projects = JSON.parse(localStorage.getItem('projects') || '[]');
+        projects.unshift({ title, contentEn, contentHi, photo: photoBase64 });
+        localStorage.setItem('projects', JSON.stringify(projects));
+
+        // Reset form and close modal
+        document.getElementById('project-title').value = '';
+        document.getElementById('project-content-en').value = '';
+        document.getElementById('project-content-hi').value = '';
+        document.getElementById('project-photo').value = '';
+        addProjectModal.style.display = 'none';
+      };
+      reader.readAsDataURL(photo);
+    });
+
+    addProjectCancel.addEventListener('click', () => {
+      // Reset form and close modal
+      document.getElementById('project-title').value = '';
+      document.getElementById('project-content-en').value = '';
+      document.getElementById('project-content-hi').value = '';
+      document.getElementById('project-photo').value = '';
+      addProjectModal.style.display = 'none';
+    });
+
+    passwordErrorOk.addEventListener('click', () => {
+      passwordErrorModal.style.display = 'none';
     });
   </script>
 </body>

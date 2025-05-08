@@ -7,17 +7,27 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .email-link {
+      text-decoration: underline;
+      color: #003087;
+    }
+    .email-link:hover {
+      color: #ff6200;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="navbar">
-      <h1 class="logo">Rasna Seva Sansthan</h1>
+      <h1 class="logo">Rasna Seva <br> Sansthan</h1>
       <nav>
         <div class="hamburger">☰</div>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Missions</a></li>
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="mission.html">Missions</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
           <li><a href="donation.html">Donate</a></li>
@@ -34,19 +44,28 @@
         <p>Reach out for collaborations, donations, or volunteering. We’d love to hear from you!</p>
         <p class="hindi">सहयोग, दान, या स्वयंसेवा के लिए संपर्क करें। हमें आपसे सुनना अच्छा लगेगा!</p>
         <p><i class="fas fa-map-marker-alt"></i> Rahar Diwara, Sonpur, Saran, Bihar, India</p>
-        <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दिवारा, सोनपुर, सारण, बिहार, भारत</p>
-        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-        <p><i class="fas fa-envelope"></i> info@rasnaseva.org</p>
+        <p class="hindi"></i> राहर दिवारा, सोनपुर, सारण, बिहार, भारत</p>
+        <p><i class="fas fa-phone"></i> +91 74887 44048</p>
+        <p><i class="fas fa-phone"></i> +91 62009 92519</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:rasnasevasansthan@gmail.com" class="email-link">rasnasevasansthan@gmail.com</a></p>
       </div>
       <div class="contact-form">
         <h3>Send Us a Message</h3>
         <h3 class="hindi">हमें संदेश भेजें</h3>
-        <form>
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea placeholder="Your Message" required></textarea>
+        <form id="contact-form" action="https://formspree.io/f/xeogkdqr" method="POST">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
+      </div>
+    </div>
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+      <div class="modal-content">
+        <p>Message sent successfully. Thank you for contacting us!</p>
+        <p class="hindi">संदेश सफलतापूर्वक भेजा गया। हमसे संपर्क करने के लिए धन्यवाद!</p>
+        <button class="btn modal-btn" id="success-ok">OK</button>
       </div>
     </div>
   </section>
@@ -58,17 +77,18 @@
         <h3 class="hindi">हमसे संपर्क करें</h3>
         <p><i class="fas fa-map-marker-alt"></i> Rahar Diwara, Sonpur, Saran, Bihar, India</p>
         <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दिवारा, सोनपुर, सारण, बिहार, भारत</p>
-        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-        <p><i class="fas fa-envelope"></i> info@rasnaseva.org</p>
+        <p><i class="fas fa-phone"></i> +91 74887 44048</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:rasnasevasansthan@gmail.com" class="email-link">rasnasevasansthan@gmail.com</a></p>
       </div>
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Missions</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="donation.html">Donate</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="mission.html">Missions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="donation.html">Donate</a></li>
         </ul>
       </div>
     </div>
@@ -82,6 +102,53 @@
     // Hamburger menu toggle
     document.querySelector('.hamburger').addEventListener('click', () => {
       document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Form submission handling
+    const contactForm = document.getElementById('contact-form');
+    const successModal = document.getElementById('success-modal');
+    const successOk = document.getElementById('success-ok');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent default form submission
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Validate email format
+      const emailRegex = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      try {
+        // Submit form to Formspree
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Show success modal
+          successModal.style.display = 'flex';
+          // Reset form
+          contactForm.reset();
+        } else {
+          alert('Failed to send message. Please email rasnasevasansthan@gmail.com directly.');
+        }
+      } catch (error) {
+        alert('Error sending message. Please email rasnasevasansthan@gmail.com directly.');
+      }
+    });
+
+    // Close success modal
+    successOk.addEventListener('click', () => {
+      successModal.style.display = 'none';
     });
   </script>
 </body>

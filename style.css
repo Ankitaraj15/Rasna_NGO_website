@@ -10,11 +10,12 @@ body {
   background: #f5f6f5;
   color: #333;
   line-height: 1.6;
+  font-size: calc(1rem + 0.5vw); /* Responsive base font size */
 }
 
 .hindi {
   font-family: 'Noto Serif Devanagari', serif;
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + 0.4vw);
 }
 
 /* Navbar */
@@ -30,29 +31,29 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0.75rem 5%; /* Reduced padding for a more compact header */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo {
   color: #fff;
-  font-size: 2rem;
+  font-size: calc(1.5rem + 0.5vw); /* Reduced font size for logo */
   font-weight: 700;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem; /* Slightly reduced gap for compactness */
   align-items: center;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
+  font-size: calc(0.9rem + 0.2vw); /* Reduced font size for nav links */
+  padding: 0.4rem 0.8rem; /* Reduced padding */
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -65,7 +66,7 @@ header {
 .donate-btn {
   background-color: #ff6200;
   color: #fff !important;
-  padding: 0.5rem 1.5rem !important;
+  padding: 0.4rem 1.2rem !important; /* Adjusted padding */
   border-radius: 25px;
 }
 
@@ -80,7 +81,7 @@ header {
 
 .social-icons a {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: calc(1.1rem + 0.2vw); /* Slightly reduced */
   transition: color 0.3s ease;
 }
 
@@ -91,7 +92,7 @@ header {
 .hamburger {
   display: none;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: calc(1.6rem + 0.4vw); /* Slightly reduced */
   cursor: pointer;
 }
 
@@ -134,21 +135,21 @@ header {
 }
 
 .hero-text h2 {
-  font-size: 2.5rem;
+  font-size: calc(2.5rem + 0.5vw);
   margin-bottom: 0.5rem;
 }
 
 .hero-text h2.hindi {
-  font-size: 2.25rem;
+  font-size: calc(2.25rem + 0.5vw);
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: calc(1.2rem + 0.3vw);
   margin-bottom: 0.5rem;
 }
 
 .hero-text p.hindi {
-  font-size: 1.1rem;
+  font-size: calc(1.1rem + 0.3vw);
 }
 
 .hero-text p + p.hindi,
@@ -164,6 +165,7 @@ header {
   text-decoration: none;
   border-radius: 25px;
   transition: background 0.3s ease;
+  font-size: calc(1rem + 0.3vw);
 }
 
 .btn:hover {
@@ -171,7 +173,7 @@ header {
 }
 
 .btn.hindi {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + 0.3vw);
 }
 
 @keyframes slide {
@@ -192,13 +194,13 @@ header {
 }
 
 .what-we-do h2 {
-  font-size: 2.5rem;
+  font-size: calc(2.5rem + 0.5vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .what-we-do h2.hindi {
-  font-size: 2.25rem;
+  font-size: calc(2.25rem + 0.5vw);
 }
 
 .what-we-do h2 + h2.hindi {
@@ -226,13 +228,13 @@ header {
 }
 
 .program-card h3 {
-  font-size: 1.5rem;
+  font-size: calc(1.5rem + 0.3vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .program-card h3.hindi {
-  font-size: 1.35rem;
+  font-size: calc(1.35rem + 0.3vw);
 }
 
 .program-card h3 + h3.hindi {
@@ -240,12 +242,12 @@ header {
 }
 
 .program-card p {
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
   margin-bottom: 0.5rem;
 }
 
 .program-card p.hindi {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + 0.2vw);
 }
 
 .program-card p + p.hindi {
@@ -260,13 +262,13 @@ header {
 }
 
 .get-involved h2 {
-  font-size: 2.5rem;
+  font-size: calc(2.5rem + 0.5vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .get-involved h2.hindi {
-  font-size: 2.25rem;
+  font-size: calc(2.25rem + 0.5vw);
 }
 
 .get-involved h2 + h2.hindi {
@@ -286,13 +288,13 @@ header {
 }
 
 .option h3 {
-  font-size: 1.5rem;
+  font-size: calc(1.5rem + 0.3vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .option h3.hindi {
-  font-size: 1.35rem;
+  font-size: calc(1.35rem + 0.3vw);
 }
 
 .option h3 + h3.hindi {
@@ -300,12 +302,12 @@ header {
 }
 
 .option p {
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
   margin-bottom: 0.5rem;
 }
 
 .option p.hindi {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + 0.2vw);
 }
 
 .option p + p.hindi {
@@ -327,13 +329,13 @@ header {
 }
 
 .contact-info h2 {
-  font-size: 2.5rem;
+  font-size: calc(2.5rem + 0.5vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .contact-info h2.hindi {
-  font-size: 2.25rem;
+  font-size: calc(2.25rem + 0.5vw);
 }
 
 .contact-info h2 + h2.hindi {
@@ -341,12 +343,12 @@ header {
 }
 
 .contact-info p {
-  font-size: 1.1rem;
+  font-size: calc(1.1rem + 0.2vw);
   margin-bottom: 0.5rem;
 }
 
 .contact-info p.hindi {
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
 }
 
 .contact-info p + p.hindi {
@@ -358,13 +360,13 @@ header {
 }
 
 .contact-form h3 {
-  font-size: 1.8rem;
+  font-size: calc(1.8rem + 0.3vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .contact-form h3.hindi {
-  font-size: 1.6rem;
+  font-size: calc(1.6rem + 0.3vw);
 }
 
 .contact-form h3 + h3.hindi {
@@ -378,12 +380,12 @@ header {
   margin-bottom: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
 }
 
 .contact-form input.hindi,
 .contact-form textarea.hindi {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + 0.2vw);
 }
 
 .contact-form input + input.hindi,
@@ -419,13 +421,13 @@ header {
 }
 
 .about-info h2 {
-  font-size: 2.5rem;
+  font-size: calc(2.5rem + 0.5vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .about-info h2.hindi {
-  font-size: 2.25rem;
+  font-size: calc(2.25rem + 0.5vw);
 }
 
 .about-info h2 + h2.hindi {
@@ -434,13 +436,13 @@ header {
 
 .about-info p,
 .about-details p {
-  font-size: 1.1rem;
+  font-size: calc(1.1rem + 0.2vw);
   margin-bottom: 0.5rem;
 }
 
 .about-info p.hindi,
 .about-details p.hindi {
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
 }
 
 .about-info p + p.hindi,
@@ -450,14 +452,14 @@ header {
 
 .about-info h3,
 .about-details h3 {
-  font-size: 1.8rem;
+  font-size: calc(1.8rem + 0.3vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .about-info h3.hindi,
 .about-details h3.hindi {
-  font-size: 1.6rem;
+  font-size: calc(1.6rem + 0.3vw);
 }
 
 .about-info h3 + h3.hindi,
@@ -474,6 +476,112 @@ header {
   margin-top: 0.25rem;
 }
 
+/* Members Section */
+.members-section {
+  padding: 4rem 5%;
+  background: #f0f4f8;
+  text-align: center;
+}
+
+.members-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.members-container h2 {
+  font-size: calc(2.5rem + 0.5vw);
+  color: #003087;
+  margin-bottom: 0.5rem;
+}
+
+.members-container h2.hindi {
+  font-size: calc(2.25rem + 0.5vw);
+}
+
+.members-container h2 + h2.hindi {
+  margin-top: 0.25rem;
+}
+
+.members-slider {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.member-card {
+  flex: 0 0 33.33%;
+  background: #fff;
+  padding: 1.5rem;
+  margin: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-10px);
+}
+
+.member-photo {
+  width: calc(150px + 5vw);
+  height: calc(150px + 5vw);
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.member-info h3 {
+  font-size: calc(1.5rem + 0.3vw);
+  color: #003087;
+  margin-bottom: 0.25rem;
+}
+
+.member-info h3.hindi {
+  font-size: calc(1.35rem + 0.3vw);
+}
+
+.member-info p {
+  font-size: calc(1rem + 0.2vw);
+  margin-bottom: 0.25rem;
+}
+
+.member-info p.hindi {
+  font-size: calc(0.95rem + 0.2vw);
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #003087;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: calc(1.2rem + 0.3vw);
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.slider-arrow:hover {
+  background: #ff6200;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
 /* Projects Section */
 .projects-section {
   padding: 4rem 5%;
@@ -486,13 +594,13 @@ header {
 }
 
 .projects-container h2 {
-  font-size: 2.5rem;
+  font-size: calc(2.5rem + 0.5vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .projects-container h2.hindi {
-  font-size: 2.25rem;
+  font-size: calc(2.25rem + 0.5vw);
 }
 
 .projects-container h2 + h2.hindi {
@@ -500,12 +608,12 @@ header {
 }
 
 .projects-container p {
-  font-size: 1.1rem;
+  font-size: calc(1.1rem + 0.2vw);
   margin-bottom: 0.5rem;
 }
 
 .projects-container p.hindi {
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
 }
 
 .projects-container p + p.hindi {
@@ -528,13 +636,13 @@ header {
 }
 
 .project-text h3 {
-  font-size: 1.8rem;
+  font-size: calc(1.8rem + 0.3vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .project-text h3.hindi {
-  font-size: 1.6rem;
+  font-size: calc(1.6rem + 0.3vw);
 }
 
 .project-text h3 + h3.hindi {
@@ -542,12 +650,12 @@ header {
 }
 
 .project-text p {
-  font-size: 1.1rem;
+  font-size: calc(1.1rem + 0.2vw);
   margin-bottom: 0.5rem;
 }
 
 .project-text p.hindi {
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
 }
 
 .project-text p + p.hindi {
@@ -577,13 +685,13 @@ header {
 }
 
 .gallery-container h2 {
-  font-size: 2.5rem;
+  font-size: calc(2.5rem + 0.5vw);
   color: #003087;
   margin-bottom: 0.5rem;
 }
 
 .gallery-container h2.hindi {
-  font-size: 2.25rem;
+  font-size: calc(2.25rem + 0.5vw);
 }
 
 .gallery-container h2 + h2.hindi {
@@ -591,48 +699,144 @@ header {
 }
 
 .gallery-container p {
-  font-size: 1.1rem;
+  font-size: calc(1.1rem + 0.2vw);
   margin-bottom: 0.5rem;
 }
 
 .gallery-container p.hindi {
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
 }
 
 .gallery-container p + p.hindi {
   margin-top: 0.25rem;
 }
 
-.gallery-item {
+.upload-section {
   margin-bottom: 2rem;
+  text-align: center;
+}
+
+.upload-btn {
+  background-color: #003087;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #ff6200;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.gallery-item {
+  margin-bottom: 1rem;
 }
 
 .gallery-item img {
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+  max-height: calc(300px + 10vw);
+  object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .gallery-item p {
-  font-size: 1.1rem;
+  font-size: calc(1.1rem + 0.2vw);
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .gallery-item p.hindi {
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
 }
 
 .gallery-item p + p.hindi {
   margin-top: 0.25rem;
 }
 
-/* Footer */
-footer {
+/* Modal for Delete Confirmation, Try Again, and Success */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-content p {
+  font-size: calc(1.1rem + 0.2vw);
+  margin-bottom: 1rem;
+}
+
+.modal-content p.hindi {
+  font-size: calc(1rem + 0.2vw);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modal-btn {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+#confirm-delete {
+  background-color: #ff6200;
+}
+
+#confirm-delete:hover {
+  background-color: #e55a00;
+}
+
+#cancel-delete {
+  background-color: #ccc;
+  color: #333;
+}
+
+#cancel-delete:hover {
+  background-color: #bbb;
+}
+
+#try-again-ok,
+#success-ok {
   background-color: #003087;
   color: #fff;
+}
+
+#try-again-ok:hover,
+#success-ok:hover {
+  background-color: #ff6200;
+}
+
+/* Footer */
+footer {
+  background-color: #078efc;
+  color: #ccf3f1;
   padding: 3rem 5%;
 }
 
@@ -645,12 +849,12 @@ footer {
 }
 
 .footer-section h3 {
-  font-size: 1.5rem;
+  font-size: calc(1.5rem + 0.3vw);
   margin-bottom: 0.5rem;
 }
 
 .footer-section h3.hindi {
-  font-size: 1.35rem;
+  font-size: calc(1.35rem + 0.3vw);
 }
 
 .footer-section h3 + h3.hindi {
@@ -659,13 +863,13 @@ footer {
 
 .footer-section p,
 .footer-section ul li a {
-  font-size: 1rem;
-  color: #fff;
+  font-size: calc(1rem + 0.2vw);
+  color: #0f0e0e;
   text-decoration: none;
 }
 
 .footer-section p.hindi {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + 0.2vw);
 }
 
 .footer-section p + p.hindi {
@@ -686,10 +890,11 @@ footer {
   margin-bottom: 0.5rem;
   border: none;
   border-radius: 5px;
+  font-size: calc(1rem + 0.2vw);
 }
 
 .footer-section input.hindi {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + 0.2vw);
 }
 
 .footer-section input + input.hindi {
@@ -704,12 +909,12 @@ footer {
 }
 
 .footer-bottom p {
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
   margin-bottom: 0.5rem;
 }
 
 .footer-bottom p.hindi {
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + 0.2vw);
 }
 
 .footer-bottom p + p.hindi {
@@ -719,7 +924,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem 5%;
+    padding: 0.75rem 5%;
   }
 
   .nav-links {
@@ -754,19 +959,19 @@ footer {
   }
 
   .hero-text h2 {
-    font-size: 1.8rem;
+    font-size: calc(1.8rem + 0.5vw);
   }
 
   .hero-text h2.hindi {
-    font-size: 1.6rem;
+    font-size: calc(1.6rem + 0.5vw);
   }
 
   .hero-text p {
-    font-size: 1rem;
+    font-size: calc(1rem + 0.3vw);
   }
 
   .hero-text p.hindi {
-    font-size: 0.9rem;
+    font-size: calc(0.9rem + 0.3vw);
   }
 
   .contact-container,
@@ -789,57 +994,118 @@ footer {
     text-align: center;
   }
 
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
   .gallery-item img {
-    max-height: 300px;
+    max-height: calc(250px + 10vw);
+  }
+
+  .members-slider {
+    margin-top: 1.5rem;
+  }
+
+  .member-card {
+    flex: 0 0 80%;
+  }
+
+  .slider-arrow {
+    padding: 0.4rem;
+    font-size: calc(1rem + 0.2vw);
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    font-size: calc(0.9rem + 0.5vw);
+  }
+
+  .logo {
+    font-size: calc(1.4rem + 0.5vw); /* Further reduced for small screens */
+  }
+
+  .nav-links a {
+    font-size: calc(0.85rem + 0.2vw);
+  }
+
   .hero-text h2 {
-    font-size: 1.5rem;
+    font-size: calc(1.5rem + 0.5vw);
   }
 
   .hero-text h2.hindi {
-    font-size: 1.35rem;
+    font-size: calc(1.35rem + 0.5vw);
   }
 
   .hero-text p {
-    font-size: 0.9rem;
+    font-size: calc(0.9rem + 0.3vw);
   }
 
   .hero-text p.hindi {
-    font-size: 0.85rem;
+    font-size: calc(0.85rem + 0.3vw);
   }
 
   .btn {
     padding: 0.5rem 1rem;
+    font-size: calc(0.9rem + 0.3vw);
   }
 
   .contact-info h2,
   .about-info h2,
   .projects-container h2,
-  .gallery-container h2 {
-    font-size: 2rem;
+  .gallery-container h2,
+  .members-container h2 {
+    font-size: calc(2rem + 0.5vw);
   }
 
   .contact-info h2.hindi,
   .about-info h2.hindi,
   .projects-container h2.hindi,
-  .gallery-container h2.hindi {
-    font-size: 1.8rem;
+  .gallery-container h2.hindi,
+  .members-container h2.hindi {
+    font-size: calc(1.8rem + 0.5vw);
   }
 
   .contact-form h3,
   .about-info h3,
   .about-details h3,
-  .project-text h3 {
-    font-size: 1.5rem;
+  .project-text h3,
+  .member-info h3 {
+    font-size: calc(1.5rem + 0.3vw);
   }
 
   .contact-form h3.hindi,
   .about-info h3.hindi,
   .about-details h3.hindi,
-  .project-text h3.hindi {
-    font-size: 1.35rem;
+  .project-text h3.hindi,
+  .member-info h3.hindi {
+    font-size: calc(1.35rem + 0.3vw);
+  }
+
+  .member-card {
+    flex: 0 0 100%;
+    margin: 0 5px;
+  }
+
+  .member-photo {
+    width: calc(120px + 5vw);
+    height: calc(120px + 5vw);
+  }
+
+  .gallery-item img {
+    max-height: calc(200px + 10vw);
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .modal-content p {
+    font-size: calc(1rem + 0.2vw);
+  }
+
+  .modal-content p.hindi {
+    font-size: calc(0.9rem + 0.2vw);
   }
 }

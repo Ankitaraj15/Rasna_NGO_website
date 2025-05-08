@@ -11,13 +11,14 @@
 <body>
   <header>
     <div class="navbar">
-      <h1 class="logo">Rasna Seva Sansthan</h1>
+      <h1 class="logo">Rasna Seva <br> Sansthan</h1>
       <nav>
         <div class="hamburger">☰</div>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Missions</a></li>
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="mission.html">Missions</a></li>
           <li><a href="gallery.html" class="active">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="donation.html">Donate</a></li>
@@ -32,25 +33,72 @@
       <h2 class="hindi">हमारी गैलरी</h2>
       <p>Discover the impact of our initiatives through these moments captured in our work.</p>
       <p class="hindi">हमारे कार्यों में कैद इन पलों के माध्यम से हमारी पहलों का प्रभाव जानें।</p>
-      <div class="gallery-item">
-        <img src="images/slide1.jpg" alt="Education Program">
-        <p>Children learning at our rural school, gaining access to quality education.</p>
-        <p class="hindi">हमारे ग्रामीण स्कूल में बच्चे पढ़ते हुए, गुणवत्तापूर्ण शिक्षा प्राप्त कर रहे हैं।</p>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-id="slide7">
+          <img src="images/slide7.jpg" alt="Education Program">
+        </div>
+        <div class="gallery-item" data-id="slide8">
+          <img src="images/slide8.jpg" alt="Education Program">
+        </div>
+        <div class="gallery-item" data-id="slide9">
+          <img src="images/slide9.jpg" alt="Education Program">
+        </div>
+        <div class="gallery-item" data-id="slide14">
+          <img src="images/slide14.jpg" alt="Education Program">
+        </div>
+        <div class="gallery-item" data-id="slide10">
+          <img src="images/slide10.jpg" alt="Education Program">
+        </div>
+        <div class="gallery-item" data-id="slide11">
+          <img src="images/slide11.jpg" alt="Education Program">
+        </div>
+        <div class="gallery-item" data-id="slide12">
+          <img src="images/slide12.jpg" alt="Education Program">
+        </div>
+        <div class="gallery-item" data-id="slide15">
+          <img src="images/slide15.jpg" alt="Education Program">
+        </div>
+        <div class="gallery-item" data-id="slide13">
+          <img src="images/slide13.jpg" alt="Education Program">
+        </div>
+        <div class="gallery-item" data-id="slide16">
+          <img src="images/slide16.jpg" alt="Education Program">
+        </div>
+        <div class="gallery-item" data-id="slide17">
+          <img src="images/slide17.jpg" alt="Healthcare Camp">
+        </div>
+        <div class="gallery-item" data-id="slide18">
+          <img src="images/slide18.jpg" alt="Women Empowerment">
+        </div>
+        <div class="gallery-item" data-id="slide19">
+          <img src="images/slide19.jpg" alt="Women Empowerment">
+        </div>
+        <div class="gallery-item" data-id="slide20">
+          <img src="images/slide20.jpg" alt="Social Reform Event">
+        </div>
       </div>
-      <div class="gallery-item">
-        <img src="images/slide2.jpg" alt="Healthcare Camp">
-        <p>Medical check-ups at our healthcare camp, bringing care to underserved communities.</p>
-        <p class="hindi">हमारे स्वास्थ्य शिविर में चिकित्सा जाँच, वंचित समुदायों तक देखभाल पहुँचाना।</p>
+      <div class="upload-section">
+        <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+        <button class="btn upload-btn">Add Photo</button>
       </div>
-      <div class="gallery-item">
-        <img src="images/slide3.jpg" alt="Women Empowerment">
-        <p>Women training in our vocational program, building skills for economic independence.</p>
-        <p class="hindi">हमारे व्यावसायिक प्रशिक्षण कार्यक्रम में महिलाएँ प्रशिक्षण लेती हुईं, आर्थिक स्वतंत्रता के लिए कौशल निर्माण।</p>
+    </div>
+    <!-- Delete Confirmation Modal -->
+    <div class="modal" id="delete-modal">
+      <div class="modal-content">
+        <p>Are you sure you want to delete this photo?</p>
+        <p class="hindi">क्या आप वाकई इस फोटो को हटाना चाहते हैं?</p>
+        <div class="modal-buttons">
+          <button class="btn modal-btn" id="confirm-delete">Yes</button>
+          <button class="btn modal-btn" id="cancel-delete">No</button>
+        </div>
       </div>
-      <div class="gallery-item">
-        <img src="images/slide4.jpg" alt="Social Reform Event">
-        <p>Community gathering for social reform awareness, promoting equality and justice.</p>
-        <p class="hindi">सामाजिक सुधार जागरूकता के लिए सामुदायिक सभा, समानता और न्याय को बढ़ावा देना।</p>
+    </div>
+    <!-- Try Again Later Modal -->
+    <div class="modal" id="try-again-modal">
+      <div class="modal-content">
+        <p>Try again later</p>
+        <p class="hindi">बाद में पुन: प्रयास करें</p>
+        <button class="btn modal-btn" id="try-again-ok">OK</button>
       </div>
     </div>
   </section>
@@ -62,18 +110,20 @@
         <h3 class="hindi">हमसे संपर्क करें</h3>
         <p><i class="fas fa-map-marker-alt"></i> Rahar Diwara, Sonpur, Saran, Bihar, India</p>
         <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दिवारा, सोनपुर, सारण, बिहार, भारत</p>
-        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-        <p><i class="fas fa-envelope"></i> info@rasnaseva.org</p>
+        <p><i class="fas fa-phone"></i> +91 74887 44048</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:rasnasevasansthan@gmail.com" class="email-link">rasnasevasansthan@gmail.com</a></p>
       </div>
       <div class="footer-section">
         <h3>Quick Links</h3>
         <h3 class="hindi">त्वरित लिंक</h3>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Missions</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="donation.html">Donate</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="mission.html">Missions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donation.html">Donate</a></li>
         </ul>
       </div>
     </div>
@@ -87,6 +137,141 @@
     // Hamburger menu toggle
     document.querySelector('.hamburger').addEventListener('click', () => {
       document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Password for add/delete
+    const CORRECT_PASSWORD = '4564';
+
+    // Photo upload functionality
+    const uploadInput = document.getElementById('photo-upload');
+    const uploadBtn = document.querySelector('.upload-btn');
+    const galleryGrid = document.querySelector('.gallery-grid');
+    const tryAgainModal = document.getElementById('try-again-modal');
+    const tryAgainOk = document.getElementById('try-again-ok');
+
+    // Load photos from LocalStorage on page load
+    function loadPhotos() {
+      const photos = JSON.parse(localStorage.getItem('galleryPhotos') || '[]');
+      photos.forEach(photo => {
+        const galleryItem = document.createElement('div');
+        galleryItem.classList.add('gallery-item');
+        galleryItem.setAttribute('data-id', photo.id);
+        galleryItem.innerHTML = `<img src="${photo.src}" alt="Uploaded Photo">`;
+        galleryGrid.prepend(galleryItem);
+        attachLongPressEvent(galleryItem);
+      });
+    }
+
+    // Call loadPhotos on page load
+    loadPhotos();
+
+    uploadBtn.addEventListener('click', () => {
+      const password = prompt('Enter 4-digit password to add photo:');
+      if (password === CORRECT_PASSWORD) {
+        uploadInput.click();
+      } else {
+        tryAgainModal.style.display = 'flex';
+      }
+    });
+
+    uploadInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const imgSrc = event.target.result;
+          const uniqueId = `uploaded-${Date.now()}`;
+          const galleryItem = document.createElement('div');
+          galleryItem.classList.add('gallery-item');
+          galleryItem.setAttribute('data-id', uniqueId);
+          galleryItem.innerHTML = `<img src="${imgSrc}" alt="Uploaded Photo">`;
+          galleryGrid.prepend(galleryItem);
+          attachLongPressEvent(galleryItem);
+
+          // Save to LocalStorage
+          const photos = JSON.parse(localStorage.getItem('galleryPhotos') || '[]');
+          photos.unshift({ id: uniqueId, src: imgSrc });
+          localStorage.setItem('galleryPhotos', JSON.stringify(photos));
+
+          // Reset input
+          uploadInput.value = '';
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Long press detection
+    let longPressTimer;
+    const longPressDuration = 500; // 500ms for long press
+
+    function attachLongPressEvent(item) {
+      const img = item.querySelector('img');
+      let isLongPress = false;
+
+      const startPress = () => {
+        isLongPress = false;
+        longPressTimer = setTimeout(() => {
+          isLongPress = true;
+          showDeleteModal(item);
+        }, longPressDuration);
+      };
+
+      const endPress = () => {
+        clearTimeout(longPressTimer);
+      };
+
+      // For touch devices
+      img.addEventListener('touchstart', startPress);
+      img.addEventListener('touchend', endPress);
+      img.addEventListener('touchcancel', endPress);
+
+      // For desktop (click as fallback)
+      img.addEventListener('mousedown', startPress);
+      img.addEventListener('mouseup', endPress);
+      img.addEventListener('mouseleave', endPress);
+    }
+
+    // Attach long press to existing gallery items
+    document.querySelectorAll('.gallery-item').forEach(attachLongPressEvent);
+
+    // Delete modal functionality
+    const deleteModal = document.getElementById('delete-modal');
+    const confirmDelete = document.getElementById('confirm-delete');
+    const cancelDelete = document.getElementById('cancel-delete');
+    let itemToDelete = null;
+
+    function showDeleteModal(item) {
+      itemToDelete = item;
+      deleteModal.style.display = 'flex';
+    }
+
+    confirmDelete.addEventListener('click', () => {
+      deleteModal.style.display = 'none';
+      const password = prompt('Enter 4-digit password to delete photo:');
+      if (password === CORRECT_PASSWORD) {
+        if (itemToDelete) {
+          const itemId = itemToDelete.getAttribute('data-id');
+          // Remove from LocalStorage if it's an uploaded photo
+          const photos = JSON.parse(localStorage.getItem('galleryPhotos') || '[]');
+          const updatedPhotos = photos.filter(photo => photo.id !== itemId);
+          localStorage.setItem('galleryPhotos', JSON.stringify(updatedPhotos));
+          // Remove from DOM
+          itemToDelete.remove();
+          itemToDelete = null;
+        }
+      } else {
+        tryAgainModal.style.display = 'flex';
+      }
+    });
+
+    cancelDelete.addEventListener('click', () => {
+      itemToDelete = null;
+      deleteModal.style.display = 'none';
+    });
+
+    // Try again modal functionality
+    tryAgainOk.addEventListener('click', () => {
+      tryAgainModal.style.display = 'none';
     });
   </script>
 </body>
