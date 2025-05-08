@@ -136,20 +136,22 @@
 
   <script>
     // Ensure DOM is fully loaded before running the script
-    document.addEventListener('DOMContentLoaded', () => {
+    window.onload = () => {
+      console.log('Window loaded, setting up hamburger menu...');
       const hamburger = document.querySelector('.hamburger');
       const navLinks = document.querySelector('.nav-links');
 
       if (hamburger && navLinks) {
+        console.log('Hamburger and nav-links found, adding event listener...');
         hamburger.addEventListener('click', () => {
+          console.log('Hamburger clicked, toggling menu...');
           navLinks.classList.toggle('active');
-          // Optional: Change hamburger icon to 'X' when menu is open
           hamburger.textContent = navLinks.classList.contains('active') ? '✖' : '☰';
         });
       } else {
         console.error('Hamburger or nav-links element not found.');
       }
-    });
+    };
   </script>
 </body>
 </html>
