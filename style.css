@@ -129,50 +129,51 @@ header {
   max-width: 90%; /* Adjusted for smaller screens */
   text-align: center;
   background: rgba(0, 0, 0, 0.6);
-  padding: 1.5rem; /* Reduced padding for smaller screens */
+  padding: 1rem; /* Reduced padding for smaller screens */
   border-radius: 10px;
   color: #fff;
   box-sizing: border-box; /* Ensure padding doesn't cause overflow */
   overflow-wrap: break-word; /* Ensure text wraps properly */
+  overflow: hidden; /* Prevent overflow */
 }
 
 .hero-text h2 {
-  font-size: calc(2rem + 0.5vw); /* Slightly smaller base size */
-  margin-bottom: 0.5rem;
+  font-size: calc(1.8rem + 0.5vw); /* Reduced base size */
+  margin-bottom: 0.4rem;
   line-height: 1.2; /* Prevent text from being cut off */
   overflow-wrap: break-word; /* Ensure long words wrap */
 }
 
 .hero-text h2.hindi {
-  font-size: calc(1.8rem + 0.5vw); /* Adjusted for better fit */
+  font-size: calc(1.6rem + 0.5vw); /* Adjusted for better fit */
 }
 
 .hero-text p {
-  font-size: calc(1rem + 0.3vw); /* Smaller base size for better readability */
-  margin-bottom: 0.5rem;
+  font-size: calc(0.9rem + 0.3vw); /* Reduced base size */
+  margin-bottom: 0.4rem;
   line-height: 1.4; /* Prevent text from being cut off */
   overflow-wrap: break-word; /* Ensure long words wrap */
 }
 
 .hero-text p.hindi {
-  font-size: calc(0.9rem + 0.3vw);
+  font-size: calc(0.8rem + 0.3vw);
 }
 
 .hero-text p + p.hindi,
 .hero-text h2 + h2.hindi {
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
 }
 
 .btn {
   display: inline-block; /* Ensure button is visible */
   background-color: #ff6200;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem; /* Reduced padding */
   text-decoration: none;
   border-radius: 25px;
   transition: background 0.3s ease;
-  font-size: calc(0.9rem + 0.3vw); /* Adjusted for smaller screens */
-  margin-top: 0.5rem; /* Ensure button has space */
+  font-size: calc(0.8rem + 0.3vw); /* Reduced font size */
+  margin-top: 0.4rem; /* Reduced margin */
 }
 
 .btn:hover {
@@ -180,7 +181,7 @@ header {
 }
 
 .btn.hindi {
-  font-size: calc(0.85rem + 0.3vw);
+  font-size: calc(0.75rem + 0.3vw);
 }
 
 @keyframes slide {
@@ -967,29 +968,30 @@ footer {
   }
 
   .hero-text {
-    padding: 1rem; /* Further reduced padding */
-    max-width: 85%; /* Reduced to ensure text fits */
+    padding: 0.8rem; /* Further reduced padding */
+    max-width: 80%; /* Reduced to ensure text fits */
   }
 
   .hero-text h2 {
-    font-size: calc(1.4rem + 0.5vw); /* Further reduced for smaller screens */
+    font-size: calc(1.2rem + 0.5vw); /* Further reduced for smaller screens */
   }
 
   .hero-text h2.hindi {
-    font-size: calc(1.2rem + 0.5vw);
+    font-size: calc(1rem + 0.5vw);
   }
 
   .hero-text p {
-    font-size: calc(0.85rem + 0.3vw);
-  }
-
-  .hero-text p.hindi {
     font-size: calc(0.75rem + 0.3vw);
   }
 
+  .hero-text p.hindi {
+    font-size: calc(0.65rem + 0.3vw);
+  }
+
   .btn {
-    font-size: calc(0.8rem + 0.3vw); /* Ensure button text is readable */
-    padding: 0.4rem 0.8rem; /* Adjust padding for smaller screens */
+    font-size: calc(0.7rem + 0.3vw); /* Further reduced */
+    padding: 0.3rem 0.6rem; /* Further reduced padding */
+    margin-top: 0.3rem; /* Reduced margin */
   }
 
   .contact-container,
@@ -1056,29 +1058,32 @@ footer {
   }
 
   .hero-text {
-    padding: 0.6rem; /* Further reduced padding */
-    max-width: 80%; /* Further reduced to prevent overflow */
+    padding: 0.5rem; /* Further reduced padding */
+    max-width: 75%; /* Further reduced to prevent overflow */
+    max-height: 80%; /* Limit height to prevent overflow */
+    overflow-y: auto; /* Allow scrolling if content overflows */
   }
 
   .hero-text h2 {
-    font-size: calc(1rem + 0.5vw); /* Further reduced */
+    font-size: calc(0.9rem + 0.5vw); /* Further reduced */
   }
 
   .hero-text h2.hindi {
-    font-size: calc(0.9rem + 0.5vw);
+    font-size: calc(0.8rem + 0.5vw);
   }
 
   .hero-text p {
-    font-size: calc(0.7rem + 0.3vw);
+    font-size: calc(0.6rem + 0.3vw);
   }
 
   .hero-text p.hindi {
-    font-size: calc(0.65rem + 0.3vw);
+    font-size: calc(0.55rem + 0.3vw);
   }
 
   .btn {
-    font-size: calc(0.65rem + 0.3vw);
-    padding: 0.3rem 0.6rem; /* Further adjust padding */
+    font-size: calc(0.6rem + 0.3vw);
+    padding: 0.25rem 0.5rem; /* Further reduced padding */
+    margin-top: 0.2rem; /* Reduced margin */
   }
 
   .contact-info h2,
