@@ -79,7 +79,7 @@
             <div class="member-info">
               <h3>Aradhana Devi</h3>
               <h3 class="hindi">आराधना देवी</h3>
-              <p>Vice president</p>
+              <p>Vice president</p>
               <p class="hindi">उपाध्यक्ष पदनाम</p>
               <p><i class="fas fa-phone"></i> +91 99310 09045</p>
             </div>
@@ -130,7 +130,7 @@
             <div class="member-info">
               <h3>Dr. Jitender Kumar Singh</h3>
               <h3 class="hindi">डॉ. जितेन्द्र कुमार सिंह</h3>
-              <p>Health officer</p>
+              <p>Health officer</p>
               <p class="hindi">स्वास्थ्य अधिकारी</p>
               <p><i class="fas fa-phone"></i> +91 79774 16624</p>
             </div>
@@ -193,6 +193,8 @@
     // Hamburger menu toggle
     document.querySelector('.hamburger').addEventListener('click', () => {
       document.querySelector('.nav-links').classList.toggle('active');
+      const hamburger = document.querySelector('.hamburger');
+      hamburger.textContent = hamburger.textContent === '☰' ? '✖' : '☰';
     });
 
     // Slider functionality
@@ -201,8 +203,15 @@
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
     let currentIndex = 0;
-    const cardsToShow = 3; // Number of cards visible at a time
-    const cardWidth = cards[0].offsetWidth + 20; // Card width + margin
+
+    function calculateCardsToShow() {
+      const sliderWidth = document.querySelector('.members-slider').offsetWidth;
+      const cardWidth = cards[0].offsetWidth + 20; // Card width + margin
+      return Math.floor(sliderWidth / cardWidth); // Number of cards visible at a time
+    }
+
+    let cardsToShow = calculateCardsToShow();
+    let cardWidth = cards[0].offsetWidth + 20; // Card width + margin
 
     function updateSlider() {
       sliderTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
@@ -221,6 +230,16 @@
         updateSlider();
       }
     });
+
+    // Recalculate cardsToShow and cardWidth on window resize
+    window.addEventListener('resize', () => {
+      cardsToShow = calculateCardsToShow();
+      cardWidth = cards[0].offsetWidth + 20; // Recalculate card width
+      updateSlider(); // Update slider position
+    });
+
+    // Initial update
+    updateSlider();
   </script>
 </body>
 </html>
