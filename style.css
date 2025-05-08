@@ -133,12 +133,14 @@ header {
   border-radius: 10px;
   color: #fff;
   box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+  overflow-wrap: break-word; /* Ensure text wraps properly */
 }
 
 .hero-text h2 {
   font-size: calc(2rem + 0.5vw); /* Slightly smaller base size */
   margin-bottom: 0.5rem;
   line-height: 1.2; /* Prevent text from being cut off */
+  overflow-wrap: break-word; /* Ensure long words wrap */
 }
 
 .hero-text h2.hindi {
@@ -149,6 +151,7 @@ header {
   font-size: calc(1rem + 0.3vw); /* Smaller base size for better readability */
   margin-bottom: 0.5rem;
   line-height: 1.4; /* Prevent text from being cut off */
+  overflow-wrap: break-word; /* Ensure long words wrap */
 }
 
 .hero-text p.hindi {
@@ -965,23 +968,23 @@ footer {
 
   .hero-text {
     padding: 1rem; /* Further reduced padding */
-    max-width: 95%; /* Ensure text fits within smaller screens */
+    max-width: 85%; /* Reduced to ensure text fits */
   }
 
   .hero-text h2 {
-    font-size: calc(1.5rem + 0.5vw); /* Further reduced for smaller screens */
+    font-size: calc(1.4rem + 0.5vw); /* Further reduced for smaller screens */
   }
 
   .hero-text h2.hindi {
-    font-size: calc(1.3rem + 0.5vw);
+    font-size: calc(1.2rem + 0.5vw);
   }
 
   .hero-text p {
-    font-size: calc(0.9rem + 0.3vw);
+    font-size: calc(0.85rem + 0.3vw);
   }
 
   .hero-text p.hindi {
-    font-size: calc(0.8rem + 0.3vw);
+    font-size: calc(0.75rem + 0.3vw);
   }
 
   .btn {
@@ -1053,28 +1056,28 @@ footer {
   }
 
   .hero-text {
-    padding: 0.8rem; /* Further reduced padding */
-    max-width: 98%; /* Maximize width for very small screens */
+    padding: 0.6rem; /* Further reduced padding */
+    max-width: 80%; /* Further reduced to prevent overflow */
   }
 
   .hero-text h2 {
-    font-size: calc(1.2rem + 0.5vw); /* Further reduced */
+    font-size: calc(1rem + 0.5vw); /* Further reduced */
   }
 
   .hero-text h2.hindi {
-    font-size: calc(1rem + 0.5vw);
+    font-size: calc(0.9rem + 0.5vw);
   }
 
   .hero-text p {
-    font-size: calc(0.8rem + 0.3vw);
+    font-size: calc(0.7rem + 0.3vw);
   }
 
   .hero-text p.hindi {
-    font-size: calc(0.7rem + 0.3vw);
+    font-size: calc(0.65rem + 0.3vw);
   }
 
   .btn {
-    font-size: calc(0.7rem + 0.3vw);
+    font-size: calc(0.65rem + 0.3vw);
     padding: 0.3rem 0.6rem; /* Further adjust padding */
   }
 
