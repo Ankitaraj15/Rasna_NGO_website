@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rasna Seva Sansthan Rahar Diyara - Admin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .form-container { display: none; }
+    .form-container.active { display: block; }
+    .timer { color: #ff6200; font-size: calc(1rem + 0.2vw); margin: 0.5rem 0; }
+    .admin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .admin-item { background: #f5f6f5; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+    .admin-item img { width: 100%; max-height: calc(200px + 10vw); object-fit: contain; border-radius: 10px; }
+    .file-input {
+      display: block;
+      margin: 1rem auto;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: calc(1rem + 0.2vw);
+    }
+    .form-label {
+      display: block;
+      font-size: calc(1.1rem + 0.2vw);
+      margin-bottom: 0.5rem;
+      color: #003087;
+    }
+    .form-label.hindi {
+      font-size: calc(1rem + 0.2vw);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">Rasna Seva <br> Sansthan</h1>
+      <nav>
+        <div class="hamburger">☰</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="mission.html">Missions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donation.html">Donate</a></li>
+          <li><a href="admin.html" class="active">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="gallery-section">
+    <div class="gallery-container">
+      <h2>Admin Panel</h2>
+      <h2 class="hindi">प्रशासन पैनल</h2>
+      <div id="otp-form" class="form-container active">
+        <label class="form-label" for="email">Enter NGO Email</label>
+        <label class="form-label hindi" for="email">एनजीओ ईमेल दर्ज करें</label>
+        <input type="email" id="email" class="form-input" placeholder="Enter email">
+        <button class="btn" onclick="sendOtp()">Send OTP</button>
+        <button class="btn hindi" onclick="sendOtp()">ओटीपी भेजें</button>
+      </div>
+      <div id="code-form" class="form-container">
+        <label class="form-label" for="otp">Enter 4-digit OTP</label>
+        <label class="form-label hindi" for="otp">4-अंकीय ओटीपी दर्ज करें</label>
+        <input type="text" id="otp" class="form-input" placeholder="Enter OTP">
+        <p class="timer" id="timer"></p>
+        <button class="btn" onclick="verifyOtp()">Verify OTP</button>
+        <button class="btn hindi" onclick="verifyOtp()">ओटीपी सत्यापित करें</button>
+      </div>
+      <div id="admin-panel" class="form-container">
+        <button class="btn" onclick="showForm('photo-form')">Add Photo</button>
+        <button class="btn hindi" onclick="showForm('photo-form')">फोटो जोड़ें</button>
+        <button class="btn" onclick="showForm('project-form')">Add Project</button>
+        <button class="btn hindi" onclick="showForm('project-form')">प्रोजेक्ट जोड़ें</button>
+        <div id="photo-form" class="form-container">
+          <h3>Add Photo</h3>
+          <h3 class="hindi">फोटो जोड़ें</h3>
+          <label class="form-label" for="photo-alt">Photo Description</label>
+          <label class="form-label hindi" for="photo-alt">फोटो विवरण</label>
+          <input type="text" id="photo-alt" class="form-input" placeholder="Enter photo description">
+          <label class="form-label" for="photo-upload">Photo (1 photo required)</label>
+          <label class="form-label hindi" for="photo-upload">फोटो (1 फोटो आवश्यक)</label>
+          <input type="file" id="photo-upload" class="file-input" accept="image/*" required>
+          <button class="btn" onclick="addPhoto()">Submit</button>
+          <button class="btn hindi" onclick="addPhoto()">जमा करें</button>
+        </div>
+        <div id="project-form" class="form-container">
+          <h3>Add Project</h3>
+          <h3 class="hindi">प्रोजेक्ट जोड़ें</h3>
+          <label class="form-label" for="project-title">Project Title</label>
+          <label class="form-label hindi" for="project-title">प्रोजेक्ट का शीर्षक</label>
+          <input type="text" id="project-title" class="form-input" placeholder="Enter project title" required>
+          <label class="form-label" for="project-content-en">Project Content (English)</label>
+          <label class="form-label hindi" for="project-content-en">प्रोजेक्ट सामग्री (अंग्रेजी)</label>
+          <textarea id="project-content-en" class="form-input" placeholder="Enter project content in English" required></textarea>
+          <label class="form-label" for="project-content-hi">Project Content (Hindi)</label>
+          <label class="form-label hindi" for="project-content-hi">प्रोजेक्ट सामग्री (हिंदी)</label>
+          <textarea id="project-content-hi" class="form-input" placeholder="Enter project content in Hindi" required></textarea>
+          <label class="form-label" for="project-photo">Project Photo (1 photo required)</label>
+          <label class="form-label hindi" for="project-photo">प्रोजेक्ट फोटो (1 फोटो आवश्यक)</label>
+          <input type="file" id="project-photo" class="file-input" accept="image/*" required>
+          <button class="btn" onclick="addProject()">Submit</button>
+          <button class="btn hindi" onclick="addProject()">जमा करें</button>
+        </div>
+        <h3>Manage Photos</h3>
+        <h3 class="hindi">फोटो प्रबंधन</h3>
+        <div class="admin-grid" id="photo-grid"></div>
+        <h3>Manage Projects</h3>
+        <h3 class="hindi">प्रोजेक्ट्स प्रबंधन</h3>
+        <div class="admin-grid" id="project-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <h3 class="hindi">हमसे संपर्क करें</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Rahar Diyara, Sonpur, Saran, Bihar, India</p>
+        <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दियारा, सोनपुर, सारण, बिहार, भारत</p>
+        <p><i class="fas fa-phone"></i> +91 74887 44048</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:rasnasevasansthan@gmail.com" class="email-link">rasnasevasansthan@gmail.com</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <h3 class="hindi">त्वरित लिंक</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="mission.html">Missions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donation.html">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Rasna Seva Sansthan Rahar Diyara. All rights reserved.</p>
+      <p class="hindi">© 2025 रसना सेवा संस्थान राहर दियारा। सर्वाधिकार सुरक्षित।</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu toggle
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    function showForm(formId) {
+      document.querySelectorAll('.form-container').forEach(form => form.classList.remove('active'));
+      document.getElementById(formId).classList.add('active');
+    }
+
+    async function sendOtp() {
+      const email = document.getElementById('email').value;
+      const response = await fetch('http://localhost:3000/api/send-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      const result = await response.json();
+      if (response.ok) {
+        document.getElementById('otp-form').classList.remove('active');
+        document.getElementById('code-form').classList.add('active');
+        startTimer();
+      } else {
+        alert(result.error);
+      }
+    }
+
+    function startTimer() {
+      let timeLeft = 5 * 60;
+      const timer = document.getElementById('timer');
+      timer.textContent = `Time left: ${Math.floor(timeLeft / 60)}:${(timeLeft % 60).toString().padStart(2, '0')}`;
+      const timerInterval = setInterval(() => {
+        timeLeft--;
+        timer.textContent = `Time left: ${Math.floor(timeLeft / 60)}:${(timeLeft % 60).toString().padStart(2, '0')}`;
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('OTP expired');
+          document.getElementById('code-form').classList.remove('active');
+          document.getElementById('otp-form').classList.add('active');
+        }
+      }, 1000);
+    }
+
+    async function verifyOtp() {
+      const email = document.getElementById('email').value;
+      const otp = document.getElementById('otp').value;
+      const response = await fetch('http://localhost:3000/api/verify-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, otp })
+      });
+      const result = await response.json();
+      if (response.ok) {
+        document.getElementById('code-form').classList.remove('active');
+        document.getElementById('admin-panel').classList.add('active');
+        loadAdminContent();
+      } else {
+        alert(result.error);
+      }
+    }
+
+    async function addPhoto() {
+      const alt = document.getElementById('photo-alt').value.trim();
+      const file = document.getElementById('photo-upload').files[0];
+      if (!alt || !file) {
+        alert('Please fill all fields and upload a photo.');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        const src = e.target.result;
+        const id = `photo-${Date.now()}`;
+        const response = await fetch('http://localhost:3000/api/photos', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id, src, alt })
+        });
+        const result = await response.json();
+        if (response.ok) {
+          alert('Photo added successfully');
+          document.getElementById('photo-alt').value = '';
+          document.getElementById('photo-upload').value = '';
+          loadAdminContent();
+        } else {
+          alert(result.error);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    async function addProject() {
+      const title = document.getElementById('project-title').value.trim();
+      const contentEn = document.getElementById('project-content-en').value.trim();
+      const contentHi = document.getElementById('project-content-hi').value.trim();
+      const file = document.getElementById('project-photo').files[0];
+      if (!title || !contentEn || !contentHi || !file) {
+        alert('Please fill all fields and upload a photo.');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        const photo = e.target.result;
+        const id = `project-${Date.now()}`;
+        const response = await fetch('http://localhost:3000/api/projects', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id, title, contentEn, contentHi, photo })
+        });
+        const result = await response.json();
+        if (response.ok) {
+          alert('Project added successfully');
+          document.getElementById('project-title').value = '';
+          document.getElementById('project-content-en').value = '';
+          document.getElementById('project-content-hi').value = '';
+          document.getElementById('project-photo').value = '';
+          loadAdminContent();
+        } else {
+          alert(result.error);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    async function deletePhoto(id) {
+      const response = await fetch(`http://localhost:3000/api/photos/${id}`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' }
+      });
+      const result = await response.json();
+      if (response.ok) {
+        alert('Photo deleted successfully');
+        loadAdminContent();
+      } else {
+        alert(result.error);
+      }
+    }
+
+    async function deleteProject(id) {
+      const response = await fetch(`http://localhost:3000/api/projects/${id}`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' }
+      });
+      const result = await response.json();
+      if (response.ok) {
+        alert('Project deleted successfully');
+        loadAdminContent();
+      } else {
+        alert(result.error);
+      }
+    }
+
+    async function loadAdminContent() {
+      // Load photos
+      const photoGrid = document.getElementById('photo-grid');
+      photoGrid.innerHTML = '';
+      const photoResponse = await fetch('http://localhost:3000/api/photos');
+      const photos = await photoResponse.json();
+      photos.forEach(photo => {
+        const item = document.createElement('div');
+        item.classList.add('admin-item');
+        item.innerHTML = `
+          <img src="${photo.src}" alt="${photo.alt}">
+          <p>${photo.alt}</p>
+          <button class="btn" onclick="deletePhoto('${photo.id}')">Delete</button>
+          <button class="btn hindi" onclick="deletePhoto('${photo.id}')">हटाएँ</button>
+        `;
+        photoGrid.appendChild(item);
+      });
+
+      // Load projects
+      const projectGrid = document.getElementById('project-grid');
+      projectGrid.innerHTML = '';
+      const projectResponse = await fetch('http://localhost:3000/api/projects');
+      const projects = await projectResponse.json();
+      projects.forEach(project => {
+        const item = document.createElement('div');
+        item.classList.add('admin-item');
+        item.innerHTML = `
+          <img src="${project.photo}" alt="${project.title}">
+          <p><b>${project.title}</b><br>${project.contentEn}</p>
+          <p class="hindi">${project.contentHi}</p>
+          <button class="btn" onclick="deleteProject('${project.id}')">Delete</button>
+          <button class="btn hindi" onclick="deleteProject('${project.id}')">हटाएँ</button>
+        `;
+        projectGrid.appendChild(item);
+      });
+    }
+  </script>
+</body>
+</html>

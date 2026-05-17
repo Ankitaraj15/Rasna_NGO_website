@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rasna Seva Sansthan Rahar Diyara - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .email-link {
+      text-decoration: underline;
+      color: #003087;
+    }
+    .email-link:hover {
+      color: #ff6200;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">Rasna Seva <br> Sansthan</h1>
+      <nav>
+        <div class="hamburger">☰</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="mission.html">Missions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="donation.html">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <h2 class="hindi">हमसे संपर्क करें</h2>
+        <p>Reach out for collaborations, donations, or volunteering. We’d love to hear from you!</p>
+        <p class="hindi">सहयोग, दान, या स्वयंसेवा के लिए संपर्क करें। हमें आपसे सुनना अच्छा लगेगा!</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rahar Diyara, Sonpur, Saran, Bihar, India</p>
+        <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दियारा, सोनपुर, सारण, बिहार, भारत</p>
+        <p><i class="fas fa-phone"></i> +91 74887 44048</p>
+        <p><i class="fas fa-phone"></i> +91 62009 92519</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:rasnasevasansthan@gmail.com" class="email-link">rasnasevasansthan@gmail.com</a></p>
+        <br>
+        <p><i class="fab fa-facebook" style="color: #003087; font-size: 1.2rem;"></i> <a href="https://www.facebook.com/profile.php?id=61589994329494" target="_blank" style="text-decoration: none; color: #003087; font-weight: bold;">Follow us on Facebook</a></p>
+        <p class="hindi"><i class="fab fa-facebook" style="color: #003087; font-size: 1.2rem;"></i> <a href="https://www.facebook.com/profile.php?id=61589994329494" target="_blank" style="text-decoration: none; color: #003087; font-weight: bold;">फेसबुक पर हमसे जुड़ें</a></p>
+      </div>
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <h3 class="hindi">हमें संदेश भेजें</h3>
+        <form id="contact-form" action="https://formspree.io/f/xeogkdqr" method="POST">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="success-modal">
+      <div class="modal-content">
+        <p>Message sent successfully. Thank you for contacting us!</p>
+        <p class="hindi">संदेश सफलतापूर्वक भेजा गया। हमसे संपर्क करने के लिए धन्यवाद!</p>
+        <button class="btn modal-btn" id="success-ok">OK</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <h3 class="hindi">हमसे संपर्क करें</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Rahar Diyara, Sonpur, Saran, Bihar, India</p>
+        <p class="hindi"><i class="fas fa-map-marker-alt"></i> राहर दियारा, सोनपुर, सारण, बिहार, भारत</p>
+        <p><i class="fas fa-phone"></i> +91 74887 44048</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:rasnasevasansthan@gmail.com" class="email-link">rasnasevasansthan@gmail.com</a></p>
+        <br>
+        <p><i class="fab fa-facebook" style="color: #FFFFFF; font-size: 1.2rem;"></i> <a href="https://www.facebook.com/profile.php?id=61589994329494" target="_blank" style="text-decoration: none; color: #023041; font-weight: bold;">Follow us on Facebook</a></p>
+        <p class="hindi"><i class="fab fa-facebook" style="color: #FFFFFF; font-size: 1.2rem;"></i> <a href="https://www.facebook.com/profile.php?id=61589994329494" target="_blank" style="text-decoration: none; color: #003087; font-weight: bold;">फेसबुक पर हमसे जुड़ें</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Project</a></li>
+            <li><a href="mission.html">Missions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donation.html">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Reg. No.: 442/2010-11 | New Reg. No.: 20102011S000442</p>
+      <p class="hindi">पंजीकरण संख्या: 442/2010-11 | नया पंजीकरण संख्या: 20102011S000442</p>
+      <p>NGO Darpan ID: BR/2025/0574967</p>
+      <p class="hindi">एनजीओ दर्पण आईडी: BR/2025/0574967</p>
+      <p>© 2025 Rasna Seva Sansthan Rahar Diyara. All rights reserved.</p>
+      <p class="hindi">© 2025 रसना सेवा संस्थान राहर दियारा। सर्वाधिकार सुरक्षित।</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu toggle
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Form submission handling
+    const contactForm = document.getElementById('contact-form');
+    const successModal = document.getElementById('success-modal');
+    const successOk = document.getElementById('success-ok');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent default form submission
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Validate email format
+      const emailRegex = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      try {
+        // Submit form to Formspree
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Show success modal
+          successModal.style.display = 'flex';
+          // Reset form
+          contactForm.reset();
+        } else {
+          alert('Failed to send message. Please email rasnasevasansthan@gmail.com directly.');
+        }
+      } catch (error) {
+        alert('Error sending message. Please email rasnasevasansthan@gmail.com directly.');
+      }
+    });
+
+    // Close success modal
+    successOk.addEventListener('click', () => {
+      successModal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
